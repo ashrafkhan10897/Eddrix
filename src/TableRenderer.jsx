@@ -64,13 +64,14 @@ const TableRenderer = () => {
       <Checkbox.Group style={{ marginBottom: '1rem' }} value={selectedColumns} onChange={handleColumnSelection}>
         {columnsSelection}
       </Checkbox.Group>
+      <br/>
       <Button type="primary" onClick={handleTableSubmit}>
         Submit
-      </Button>
+      </Button><br/><br/>
       <Input.Search
         placeholder="Search..."
         onSearch={handleSearch}
-        style={{ width: 200, marginLeft: '1rem', marginBottom: '1rem' }}
+        style={{marginBottom: '1rem' }}
       />
       <Table dataSource={filteredData} columns={selectedColumns.map(column => ({ title: column, dataIndex: column, key: column }))} />
     </div>
